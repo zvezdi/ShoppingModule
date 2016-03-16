@@ -1,0 +1,13 @@
+<%= form_for(:session, url: login_path) do |f| %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email, class: 'form-control' %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, class: 'form-control' %>
+
+  <%= label_tag :remember_me %>
+  <%= check_box_tag :remember_me, 1, params[:remember_me] %>
+
+  <%= f.submit "Log in", class: "btn btn-primary" %>
+<% end %>
