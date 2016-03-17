@@ -13,6 +13,13 @@
 
 ActiveRecord::Schema.define(version: 20160316202308) do
 
+  create_table "items", force: :cascade do |t|
+    t.string  "name",                                            null: false
+    t.decimal "price",       precision: 8, scale: 2,             null: false
+    t.integer "quantity",                            default: 1, null: false
+    t.text    "description"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
