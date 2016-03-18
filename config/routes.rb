@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
   resources :items
   root 'items#index'
+
+  get 'buy/:item_id', to: 'buys#show'
 end

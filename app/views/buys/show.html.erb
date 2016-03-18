@@ -1,0 +1,18 @@
+<div id="show">
+  <h3>Order for <%= @item.name %> with id: <%= @item.id %> accepted!</h3></br>
+
+  <h4> Delivery information for user. <b><%= @user.first_name %> <%= @user.last_name %></b></h4></br>
+  <h4> Recipient's address: <b><%= @user.address %></b></h4></br>
+  <h4> Recipient's phone number: <b><%= @user.phone_number %></b></h4></br>
+
+    <h3> Order information: </h3>
+    <figure>
+      <!--<img src= imageable.src alt= imageable.alt width="304" height="228"> -->
+      <% image_name = @item.name + ".jpg" %>
+      <img src="<%= image_path("#{image_name}") %>" class="img-circle" width="300" height="300"/>
+    </figure>
+
+    <span class="btn btn-primary"> price <%=@item.price%>$</span>
+    <span class="btn btn-primary pull-right"> <%= @item.quantity%> ordered </span><br>
+    <h3>Description: <small><%= @item.description %></small><h3></br>
+</div>
