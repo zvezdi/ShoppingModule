@@ -5,10 +5,40 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <style>
+    #register{
+      display:inline-block;
+      float:right;
+      margin-right:20px;
+    }
+    nav{
+      display:block;
+    }
+    li{
+      display:inline-block;
+      list-style-type:none;
+    }
+    a{
+      text-decoration:none;
+      padding:5px;
+      color:red;
+    }
+    a:hover{
+      color:blue;
+    }
+  </style>
 </head>
 <body>
-
-<%= yield %>
+  <nav>
+    <ul>
+      <li><a href='http://localhost:3000/items'>Items</a></li>
+      <div id="register">
+        <li><a href='http://localhost:3000/login'>Login</a></li>
+        <li><a href='http://localhost:3000/register'>Register</a></li>
+      </div>
+    </ul>
+  </nav>
+  <%= yield %>
 
 </body>
 </html>
