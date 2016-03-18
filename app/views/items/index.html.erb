@@ -9,8 +9,7 @@
         <img src="<%= image_path("#{image_name}") %>" class="img-circle" width="300" height="300"/>
       </figure>
       <span><a href=<%= "/buy/#{item.id}" %> class="btn btn-primary pull-right">Buy</a></span>
-      <span class="btn btn-primary"> price <%=item.price%>$</span>
-      <span class="btn btn-primary pull-right"> <%= item.quantity%> left </span>
+      <span class="btn btn-primary pull-right"> price <%=item.price%>$  <%= item.quantity%> left</span>
     </section> <br>
   </div>
   </a>
