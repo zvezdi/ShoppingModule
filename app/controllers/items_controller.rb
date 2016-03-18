@@ -1,10 +1,14 @@
 class ItemsController < ApplicationController
   def index
     @items = Item.all
+    if !current_user.nil?
+      render :index, layout: 'user'
+    else
+      render :index
+    end
   end
 
   def new
-    #only admin
     @item = Item.new
   end
 
@@ -20,6 +24,11 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
+    if !current_user.nil?
+      render :show, layout: 'user'
+    else
+      render :show
+    end
   end
 
   def edit

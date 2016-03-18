@@ -34,9 +34,9 @@
         <div id="sidebar" class="col-xs-0" align='center'>
           <!-- sidebar content -->
           <nav class="navbar navbar-default" role="navigation">
-            <span> <a class="navbar-brand" href='http://localhost:3000/items'>Items</a> </span>
-            <span> <%= current_user.first_name %> </span>
-            <span> <%= current_user.last_name %> </span>
+            <span> <a class="navbar-brand" href='http://localhost:3000/items'>Items</a>
+              <h4><%= current_user.first_name %> <%= current_user.last_name %></h4>
+            </span>
           </nav>
         </div>
         <div id="content" class="col-xs-6">

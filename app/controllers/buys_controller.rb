@@ -1,11 +1,11 @@
 class BuysController < ApplicationController
   def show
     @item = Item.find_by(id: params[:item_id])
-    @user = if current_user
-              current_user
-            else
-              Struct.new(Guest, :first_name, :last_name)
-              Guest.new('Guest', '')
-            end
+    if !current_user.nil?
+      @user = current_user
+      render :show, layout: 'user'
+    else
+      redirect_to 'sessions#login'
+    end
   end
 end
