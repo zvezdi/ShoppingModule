@@ -8,9 +8,11 @@
         <%image_name = item.name + ".jpg" %>
         <img src="<%= image_path("#{image_name}") %>" class="img-circle" width="300" height="300"/>
       </figure>
+      <br>
       <span><a href=<%= "/buy/#{item.id}" %> class="btn btn-primary pull-right">Buy</a></span>
       <span class="btn btn-primary pull-right"> price <%=item.price%>$  <%= item.quantity%> left</span>
     </section> <br>
   </div>
+  <br>
   </a>
 <%end%>

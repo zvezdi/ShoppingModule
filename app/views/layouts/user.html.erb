@@ -34,12 +34,12 @@
         <div id="sidebar" class="col-xs-0" align='center'>
           <!-- sidebar content -->
           <nav class="navbar navbar-default" role="navigation">
-            <span> <a class="navbar-brand" href='http://localhost:3000/items'>Items</a>
-              <h4><%= current_user.first_name %> <%= current_user.last_name %></h4>
+            <span> <a class="navbar-brand" href='http://localhost:3000/items'>Items</a> </span>
+              <h3><small>user</small> <%= current_user.first_name %> <%= current_user.last_name %></h3>
             </span>
           </nav>
         </div>
-        <div id="content" class="col-xs-6">
+        <div id="content" class="col-xs-8">
           <!-- main content -->
           <%= yield %>
         </div>
