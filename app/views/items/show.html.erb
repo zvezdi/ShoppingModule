@@ -1,1 +1,11 @@
-<%= @item.name %>
+<div id="show">
+    <h3><%= @item.name %></h3>
+    <figure>
+      <!--<img src= imageable.src alt= imageable.alt width="304" height="228"> -->
+      <% image_name = @item.name + ".jpg" %>
+      <img src="<%= image_path("#{image_name}") %>" width="304" height="228"/>
+    </figure>
+    <span> price <%=@item.price%> </span>
+    <span> <%= @item.quantity%> left </span></br>
+    Description: <%= @item.description %>
+</div>
