@@ -5,7 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <style>
+  <!--<style>
     #register{
       display:inline-block;
       float:right;
@@ -26,19 +26,24 @@
     a:hover{
       color:blue;
     }
-  </style>
+  </style>-->
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href='http://localhost:3000/items'>Items</a></li>
-      <div id="register">
-        <li><a href='http://localhost:3000/login'>Login</a></li>
-        <li><a href='http://localhost:3000/register'>Register</a></li>
+    <div id="main-container" class="container-fluid">
+      <div class="row">
+        <div id="sidebar" class="col-xs-0" align='center'>
+          <!-- sidebar content -->
+          <nav class="navbar navbar-default" role="navigation">
+            <span> <a class="navbar-brand" href='http://localhost:3000/login'>Login</a> </span>
+            <span> <a class="navbar-brand" href='http://localhost:3000/items'>Items</a> </span>
+            <span> <a class="navbar-brand" href='http://localhost:3000/register'>Register</a> <span>
+          </nav>
+        </div>
+        <div id="content" class="col-xs-6">
+          <!-- main content -->
+          <%= yield %>
+        </div>
       </div>
-    </ul>
-  </nav>
-  <%= yield %>
-
-</body>
+    </div>
+  </body>
 </html>
