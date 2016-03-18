@@ -3,9 +3,10 @@
     <figure>
       <!--<img src= imageable.src alt= imageable.alt width="304" height="228"> -->
       <% image_name = @item.name + ".jpg" %>
-      <img src="<%= image_path("#{image_name}") %>" width="304" height="228"/>
+      <img src="<%= image_path("#{image_name}") %>" class="img-circle" width="300" height="300"/>
     </figure>
-    <span> price <%=@item.price%> </span>
-    <span> <%= @item.quantity%> left </span></br>
-    Description: <%= @item.description %>
+    <span><a href="#" class="btn btn-primary pull-right">Buy</a></span>
+    <span class="btn btn-primary"> price <%=@item.price%>$</span>
+    <span class="btn btn-primary pull-right"> <%= @item.quantity%> left </span><br>
+    <h3>Description: <small><%= @item.description %></small><h3>
 </div>
