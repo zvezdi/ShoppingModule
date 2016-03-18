@@ -1,0 +1,9 @@
+<%= simple_form_for @item do |f| %>
+  <%= f.input :name %><br>
+  <%= f.input :description %><br>
+  <%= f.input :price %><br>
+  <%= f.input :quantity %><br>
+  <%= f.file_field :image %><br>
+
+  <%= f.submit "Submit" %>
+<% end %>
